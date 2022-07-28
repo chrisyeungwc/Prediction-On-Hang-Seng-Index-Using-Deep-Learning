@@ -1,8 +1,9 @@
 # Prediction On Hang Seng Index Using Deep Learning
-<sub>> This project is my dissertation of the master degree
-> Whole project is implemented by Python.</sup>
+> This project is my dissertation of the master degree
+> Whole project is implemented by Python.
 
 ***Project Objective***
+
 The aim of this research is to use deep learning as the main method to perform stock market forecasting with various model settings such as features engineering, ensemble methods, to provide predictive insights for client trading department, e.g. investment advisors and relationship managers.
 
 The objectives of this research are listed as below:
@@ -49,14 +50,17 @@ This section is divided into two parts: 1.) various types of technical indicator
 The technical indicators (feature engineering) used a range of days of data to generate. Due to a fixed review period (between 01Jan2013 and 31May2020), there are some null (NA) values. The earliest date is different in various models.
 
 """Normalization (Scaling Data)***
+
 All of the columns in the datasets (Date is index) are normalized as within the range between zero and one (no negative values). This normalization is adopted MinMaxScaler function in scikit-learn (package name).
 For the models of type II, the datasets are ready to transform as the inputs of deep learning models. Besides, one more procedures have to be executed for the models of type I – Feature Selection.
 
 ***Feature Selection***
+
 This section is only applied on the datasets of Type I methods. Ten out of those additional features (technical indicators) are chosen as the highest importance by using Extreme Gradient Boosting and Support Vector Regression separately. Another words, the prices of open, high, low, close and volume are filtered out in this section.
 Before performing feature importance, the dataset will be split into technical indicators, y (next date close price), training and testing with total 4 datasets on each method, which the ratio is 90:10. No shuffling split is applied such that the testing dataset is the latest trading days.
 
 ***Training and Testing Datasets***
+
 The ratio of training and testing is 90:10. The deep learning model contains two inputs, one for basic prices (open, high, low, close), another for technical indicators (including Type I and Type II).
 Other than that, the correlation plots of these datasets (total 12) indicates that volume is almost negatively correlated with other features. Therefore, all of the models are filtered out volume feature. 
 
@@ -69,6 +73,7 @@ Other than that, the correlation plots of these datasets (total 12) indicates th
 
 
 ***Models in Tensorflow.Keras***
+
 After the launch of Tensorflow version 2.0, the Keras API can be implemented in Tensorflow. For the deep learning model in Keras, there are several parts which have to be set up. 
 ![image](https://user-images.githubusercontent.com/52281668/181571853-a3f4b5a7-948d-4a14-a924-1a8366aa7d28.png)
 ![image](https://user-images.githubusercontent.com/52281668/181573255-6e0f468e-ede8-4719-a2af-fa68cfb02884.png)
@@ -94,6 +99,7 @@ The deep learning model is used training datasets (X_ohlcv_train and X_technical
 -	Tensorboard callbacks is simultaneously activated to record the training and validation process.
 
 ***Evaluation Methods***
+
 This research used three parts to perform evaluation: 1) Model Fitting Process, 2) Model Evaluation and 3) Comparison Between Actual and Predicted Values. 
 •	Model Fitting Process
 To handle the overfitting and underfitting issues, machine learning is mainly to propose comparison between training datasets and testing datasets. Deep learning (neural networks) is slightly different to machine learning, i.e. keep tracks to loss function and metrics on each epoch via model fitting process. The model automatically takes records on each epoch, using model.history.history. 
@@ -116,6 +122,7 @@ This research calculates the differences between actual values and predicted val
 ![image](https://user-images.githubusercontent.com/52281668/181573198-b2f86876-a6d5-4ccb-8338-e58d94d05591.png)
 
 ***Classification***
+
 The purpose of classification model is to compare the results with regression model. This classification model adopts support vector regression methods as feature selection. 
 For the predict values, this is categorized as two classes (named ‘categ’ column), one for price drop in next day, and zero for price rise in next day. It is the model related to binary classification. It is noted that there is no feature related to next day price, except the class.
 
