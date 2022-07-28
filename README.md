@@ -162,11 +162,17 @@ For the ‘categ’ column, it is counted the days indicating rises (944 days) r
 This classification model adopts support vector regression for feature selection. This dataset contains only one different column correspondent to same methods on regression – prediction column. The importance on features are totally different, which including:
 
   •	ADXR 14 & 50: Average Directional Movement Index Rating with time period 14 & 50 days
+  
   •	MFI 25 & 50: Money Flow Index with time period 25 & 50 days
+  
   •	PLUS_DI 7: Plus Directional Indicator  with time period 7 days
+  
   •	PLUS_DM 100: Plus Directional Movement with time period 100 days
+  
   •	HT_DCPERIOD: Hilbert Transform - Dominant Cycle Period
+  
   •	KAMA 25: Kaufman Adaptive Moving Average with time period 25 days
+  
   •	NATR 20 & 25: Normalized Average True Range with time period 20 days & 25 days
 
 •Keras Model
