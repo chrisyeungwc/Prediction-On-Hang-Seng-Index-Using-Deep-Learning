@@ -8,12 +8,12 @@
 The aim of this research is to use deep learning as the main method to perform stock market forecasting with various model settings such as features engineering, ensemble methods, to provide predictive insights for client trading department, e.g. investment advisors and relationship managers.
 
 The objectives of this research are listed as below:
-•	To conduct literature review on stock price prediction / forecasting techniques and cutting edge methodologies and frameworks.
-•	To investigate the state of art in data application design and development with a deep learning engine (e.g. Recurrent Neural Network, Long Short Term Memory, and Gated Recurrent Unit etc.). 
-•	To investigate the stock market information for features, not only Open, High, Low, Close, Volume and Date, e.g. technical indicators or macroeconomic indicators.
-•	To develop a deep learning framework to perform prediction (specify time window, cross-validation, time period and the outcome).
-•	To develop a deep learning model to achieve the prediction outcome.
-•	To obtain client’s evaluation on delivered product.
+  •	To conduct literature review on stock price prediction / forecasting techniques and cutting edge methodologies and frameworks.
+  •	To investigate the state of art in data application design and development with a deep learning engine (e.g. Recurrent Neural Network, Long Short Term Memory, and Gated Recurrent Unit etc.). 
+  •	To investigate the stock market information for features, not only Open, High, Low, Close, Volume and Date, e.g. technical indicators or macroeconomic indicators.
+  •	To develop a deep learning framework to perform prediction (specify time window, cross-validation, time period and the outcome).
+  •	To develop a deep learning model to achieve the prediction outcome.
+  •	To obtain client’s evaluation on delivered product.
 
 ***Basic Workflow***
 
@@ -191,6 +191,6 @@ Other than that, confusion matrix and classification report are also adopted in 
 
 ![image](https://user-images.githubusercontent.com/52281668/181574182-075a2e83-98cc-4553-b704-53970c73c2e1.png)
 
-The results of this classification will be shown in Chapter 4 and discussed how it does a counter-example.
+The results of this classification will be shown as a counter-example.
 
 ![image](https://user-images.githubusercontent.com/52281668/181574159-9d3e3607-371a-444b-9965-4bd9cf2ddfa8.png)
